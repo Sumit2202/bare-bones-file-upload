@@ -3,12 +3,11 @@ import { useState } from "react";
 import { NhostClient } from "@nhost/nhost-js";
 
 export default function App() {
-  const [files, setFiles] = useState([]);
   const onChange = async (e) => {
     const files = e.target.files;
 
     const nhost = new NhostClient({
-      backendUrl: "https://ilomfyseqqwhpqpspjrv.nhost.run"
+      backendUrl: "https://ilomfyseqqwhpqpspjrv.nhost.run",
     });
 
     const res = await nhost.storage.upload({ file: files[0] });
