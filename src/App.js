@@ -4,9 +4,11 @@ import { NhostClient } from "@nhost/nhost-js";
 export default function App() {
   const onChange = async (e) => {
     const files = e.target.files;
+
     const nhost = new NhostClient({
       backendUrl: "https://ilomfyseqqwhpqpspjrv.nhost.run",
     });
+
     const res = await nhost.storage.upload({ file: files[0] });
     console.log(res, "res");
   };
