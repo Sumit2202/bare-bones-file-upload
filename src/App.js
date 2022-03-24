@@ -11,6 +11,7 @@ export default function App() {
     const res = await nhost.storage.upload({ file: files[0] });
     console.log(res, "res");
   };
+
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
