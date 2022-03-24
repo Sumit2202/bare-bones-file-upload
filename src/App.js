@@ -1,5 +1,4 @@
 import "./styles.css";
-import { useState } from "react";
 import { NhostClient } from "@nhost/nhost-js";
 
 export default function App() {
